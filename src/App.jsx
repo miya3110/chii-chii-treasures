@@ -3,9 +3,11 @@ import './App.css'
 import logoMain from './assets/logo-main.png'
 import logoEmblem from './assets/logo-emblem.png'
 import logoPaw from './assets/logo-paw.png'
-import projectMedium from './assets/project-medium.png'
+
+import projectSuzumori from './assets/project-suzumori.png'
 import projectAiChat from './assets/project-ai-chat.png'
 import projectComingSoon from './assets/project-coming-soon.png'
+
 
 function App() {
   return (
@@ -18,15 +20,21 @@ function App() {
               alt="ちぃちぃトレジャーズ"
               className="brand-icon"
             />
-            <div className="brand-text">
-              <span className="brand-name">ちぃちぃトレジャーズ</span>
-              <span className="brand-sub">CHII CHII TREASURES</span>
+
+            <div className="brand-text notranslate" translate="no">
+              <span className="brand-name">
+                ちぃちぃトレジャーズ
+              </span>
+
+              <span className="brand-sub">
+                CHII CHII TREASURES
+              </span>
             </div>
           </div>
 
           <nav className="nav">
-            <a href="#about">ABOUT</a>
             <a href="#projects">PROJECTS</a>
+            <a href="#about">ABOUT</a>
             <a href="#news">NEWS</a>
             <a href="#contact">CONTACT</a>
           </nav>
@@ -50,65 +58,54 @@ function App() {
 
             <div className="hero-status">
               OFFICIAL WEBSITE
-              <span>準備中</span>
+              <span>DEVELOPING</span>
             </div>
           </div>
         </section>
 
-        <section id="about" className="section about-section">
-          <div className="section-inner about-grid">
-            <div className="about-logo-wrap">
-              <img
-                src={logoEmblem}
-                alt="ちぃちぃトレジャーズ エンブレム"
-                className="emblem-logo"
-              />
-            </div>
-
-            <div className="about-content">
-              <p className="section-label">ABOUT</p>
-              <h2>ちぃちぃトレジャーズについて</h2>
-
-              <p>
-                ちぃちぃトレジャーズは、ゲーム、アプリ、AIサービスなど、
-                「面白い」と思ったアイデアを形にしていく開発ブランドです。
-              </p>
-
-              <p>
-                ジャンルや形式に縛られず、遊びたくなるもの、
-                使いたくなるもの、物語の中へ入りたくなるものを、
-                一つずつ制作していきます。
-              </p>
-            </div>
-          </div>
-        </section>
-
-        <section id="projects" className="section projects-section">
+        <section
+          id="projects"
+          className="section projects-section"
+        >
           <div className="section-inner">
-            <p className="section-label">PROJECTS</p>
-            <h2>開発中のプロジェクト</h2>
+            <p className="section-label">
+              PROJECTS
+            </p>
+
+            <h2>
+              開発中のプロジェクト
+            </h2>
 
             <div className="project-grid">
               <article className="project-card">
                 <img
-                  src={projectMedium}
-                  alt="霊媒怪奇録（仮）"
+                  src={projectSuzumori}
+                  alt="鈴守神社～妖怪異変録～"
                   className="project-image"
                 />
 
                 <div className="project-content">
-                  <span className="project-status">企画・開発中</span>
+                  <span className="project-status">
+                    開発中
+                  </span>
 
-                  <h3>霊媒怪奇録（仮）</h3>
+                  <h3>
+                    鈴守神社～妖怪異変録～
+                  </h3>
 
                   <p>
-                    現実世界をフィールドに、幽霊と戦いながら
-                    霊媒師として成長していくスマートフォン向けAR RPG。
+                    かわいい巫女と妖怪たちが駆ける、
+                    和風アクションシューティング。
+                    神社を舞台に、不思議な異変へ立ち向かう
+                    ちぃちぃトレジャーズ第一作目です。
                   </p>
 
-                  <span className="project-link">
-                    VIEW PROJECT →
-                  </span>
+                  <a
+                    href="#"
+                    className="project-link"
+                  >
+                    プロジェクトを見る →
+                  </a>
                 </div>
               </article>
 
@@ -120,19 +117,26 @@ function App() {
                 />
 
                 <div className="project-content">
-                  <span className="project-status">企画中</span>
+                  <span className="project-status">
+                    企画中
+                  </span>
 
-                  <h3>AIキャラクターチャット</h3>
+                  <h3>
+                    AIキャラクターチャット
+                  </h3>
 
                   <p>
                     キャラクターや物語を自分で設定し、
-                    ユーザーが物語の主導権を持って楽しめる
-                    AIチャットサービスを企画しています。
+                    ユーザー自身が物語の主導権を持って楽しめる
+                    AIキャラクターチャットサービスを企画しています。
                   </p>
 
-                  <span className="project-link">
-                    VIEW PROJECT →
-                  </span>
+                  <a
+                    href="#"
+                    className="project-link"
+                  >
+                    プロジェクトを見る →
+                  </a>
                 </div>
               </article>
 
@@ -144,9 +148,13 @@ function App() {
                 />
 
                 <div className="project-content">
-                  <span className="project-status">COMING SOON</span>
+                  <span className="project-status">
+                    COMING SOON
+                  </span>
 
-                  <h3>新しい宝物を準備中</h3>
+                  <h3>
+                    新しい宝物を準備中
+                  </h3>
 
                   <p>
                     ゲーム、アプリ、AIサービスなど、
@@ -162,21 +170,86 @@ function App() {
           </div>
         </section>
 
-        <section id="news" className="section news-section">
+        <section
+          id="about"
+          className="section about-section"
+        >
+          <div className="section-inner about-grid">
+            <div className="about-logo-wrap">
+              <img
+                src={logoEmblem}
+                alt="ちぃちぃトレジャーズ エンブレム"
+                className="emblem-logo"
+              />
+            </div>
+
+            <div className="about-content">
+              <p className="section-label">
+                ABOUT
+              </p>
+
+              <h2>
+                ちぃちぃトレジャーズについて
+              </h2>
+
+              <p>
+                ちぃちぃトレジャーズは、
+                ゲーム、アプリ、AIサービスなど、
+                「面白い」と思ったアイデアを
+                一つずつ形にしていく開発ブランドです。
+              </p>
+
+              <p>
+                ジャンルや形式に縛られず、
+                遊びたくなるもの、
+                使いたくなるもの、
+                物語の中へ入りたくなるものを制作していきます。
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section
+          id="news"
+          className="section news-section"
+        >
           <div className="section-inner">
-            <p className="section-label">NEWS</p>
-            <h2>お知らせ</h2>
+            <p className="section-label">
+              NEWS
+            </p>
+
+            <h2>
+              お知らせ
+            </h2>
 
             <div className="news-list">
               <article className="news-item">
-                <time dateTime="2026-08-25">2026.08.25</time>
-                <p>ちぃちぃトレジャーズ公式サイト制作開始。</p>
+                <time dateTime="2026-08-25">
+                  2026.08.25
+                </time>
+
+                <p>
+                  ちぃちぃトレジャーズ公式サイトを公開しました。
+                </p>
+              </article>
+
+              <article className="news-item">
+                <time dateTime="2026-08-25">
+                  2026.08.25
+                </time>
+
+                <p>
+                  新作「鈴守神社～妖怪異変録～」を開発中です。
+                </p>
               </article>
             </div>
           </div>
         </section>
 
-        <section id="contact" className="section contact-section">
+        <section
+          id="contact"
+          className="section contact-section"
+        >
           <div className="section-inner contact-inner">
             <img
               src={logoPaw}
@@ -184,8 +257,13 @@ function App() {
               className="contact-paw"
             />
 
-            <p className="section-label">CONTACT</p>
-            <h2>お問い合わせ</h2>
+            <p className="section-label">
+              CONTACT
+            </p>
+
+            <h2>
+              お問い合わせ
+            </h2>
 
             <p>
               お問い合わせ窓口は現在準備中です。
@@ -203,7 +281,9 @@ function App() {
           className="footer-logo"
         />
 
-        <p>© 2026 CHII CHII TREASURES</p>
+        <p>
+          © 2026 CHII CHII TREASURES
+        </p>
       </footer>
     </div>
   )
