@@ -5,6 +5,7 @@ import logoEmblem from './assets/logo-emblem.png'
 import logoPaw from './assets/logo-paw.png'
 
 import projectSuzumori from './assets/project-suzumori.png'
+import projectSuzumoriFeatured from './assets/project-suzumori-featured.png'
 import projectAiChat from './assets/project-ai-chat.png'
 import projectComingSoon from './assets/project-coming-soon.png'
 
@@ -33,6 +34,7 @@ function App() {
           </div>
 
           <nav className="nav">
+            <a href="#featured">FEATURED</a>
             <a href="#projects">PROJECTS</a>
             <a href="#about">ABOUT</a>
             <a href="#news">NEWS</a>
@@ -64,6 +66,73 @@ function App() {
         </section>
 
         <section
+          id="featured"
+          className="section featured-section"
+        >
+          <div className="section-inner">
+            <div className="featured-heading">
+              <p className="section-label">
+                FEATURED PROJECT
+              </p>
+
+              <h2>
+                第一作目
+              </h2>
+            </div>
+
+            <article className="featured-project">
+              <div className="featured-image-wrap">
+                <img
+                  src={projectSuzumoriFeatured}
+                  alt="鈴守神社～妖怪異変録～"
+                  className="featured-image"
+                />
+
+                <span className="featured-badge">
+                  開発中
+                </span>
+              </div>
+
+              <div className="featured-content">
+                <p className="featured-number">
+                  CHII CHII TREASURES FIRST TITLE
+                </p>
+
+                <h3>
+                  鈴守神社～妖怪異変録～
+                </h3>
+
+                <p className="featured-catch">
+                  かわいい巫女と妖怪たちが駆ける、
+                  <br />
+                  和風アクションシューティング。
+                </p>
+
+                <p className="featured-description">
+                  鈴守神社を舞台に、次々と巻き起こる妖怪異変へ
+                  主人公・鈴（りん）が立ち向かいます。
+                  かわいい妖怪たちと和の世界観を楽しみながら、
+                  弾幕とアクションで異変を解決していく
+                  ちぃちぃトレジャーズ第一作目です。
+                </p>
+
+                <div className="featured-meta">
+                  <span>ジャンル：和風アクションシューティング</span>
+                  <span>ステータス：開発中</span>
+                </div>
+
+                <a
+                  href="#projects"
+                  className="featured-link"
+                >
+                  プロジェクトを見る →
+                </a>
+              </div>
+            </article>
+          </div>
+        </section>
+
+        <section
           id="projects"
           className="section projects-section"
         >
@@ -73,7 +142,7 @@ function App() {
             </p>
 
             <h2>
-              開発中のプロジェクト
+              プロジェクト
             </h2>
 
             <div className="project-grid">
@@ -101,7 +170,7 @@ function App() {
                   </p>
 
                   <a
-                    href="#"
+                    href="#featured"
                     className="project-link"
                   >
                     プロジェクトを見る →
@@ -239,7 +308,7 @@ function App() {
                 </time>
 
                 <p>
-                  新作「鈴守神社～妖怪異変録～」を開発中です。
+                  第一作目「鈴守神社～妖怪異変録～」を開発中です。
                 </p>
               </article>
             </div>
