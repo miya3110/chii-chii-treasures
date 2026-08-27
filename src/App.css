@@ -912,3 +912,145 @@ img {
 .notranslate {
   translate: no;
 }
+
+/* =========================
+   SUZUMORI PROJECT PAGE
+========================= */
+
+.suzumori-hero {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 70px 24px 90px;
+  display: grid;
+  grid-template-columns: minmax(320px, 0.8fr) minmax(360px, 1.2fr);
+  gap: 70px;
+  align-items: center;
+}
+
+.suzumori-hero-image {
+  display: flex;
+  justify-content: center;
+}
+
+.suzumori-hero-image img {
+  width: min(430px, 100%);
+  max-height: 720px;
+  object-fit: contain;
+  border-radius: 30px;
+  box-shadow:
+    0 30px 70px rgba(183, 115, 146, 0.22),
+    0 0 38px rgba(255, 195, 222, 0.22);
+}
+
+.suzumori-hero-content h1 {
+  margin: 0 0 28px;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 1.45;
+  color: #594853;
+  letter-spacing: 0.04em;
+  word-break: keep-all;
+}
+
+.suzumori-hero-content h1 span {
+  display: block;
+}
+
+.suzumori-hero-content h1 span + span {
+  margin-top: 12px;
+}
+
+.suzumori-catch {
+  margin: 0 0 28px;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 900;
+  line-height: 1.9;
+  color: #ac6f83;
+}
+
+.suzumori-info {
+  max-width: 850px;
+}
+
+.suzumori-info p:not(.section-label) {
+  line-height: 2.2;
+  color: #71626c;
+}
+
+.suzumori-feature-section {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.58),
+      rgba(255,248,252,0.72)
+    );
+}
+
+.suzumori-feature-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.suzumori-feature-grid article {
+  padding: 30px;
+  border-radius: 24px;
+  background: rgba(255,255,255,0.86);
+  border: 1px solid rgba(230, 192, 205, 0.45);
+  box-shadow:
+    0 20px 42px rgba(210, 165, 182, 0.13);
+}
+
+.suzumori-feature-grid article > span {
+  display: block;
+  margin-bottom: 18px;
+  color: #dc8fa8;
+  font-size: 0.8rem;
+  font-weight: 900;
+  letter-spacing: 0.16em;
+}
+
+.suzumori-feature-grid h3 {
+  margin: 0 0 14px;
+  color: #5e4d58;
+  font-size: 1.25rem;
+}
+
+.suzumori-feature-grid p {
+  margin: 0;
+  line-height: 1.9;
+  color: #756771;
+}
+
+.suzumori-status-box {
+  text-align: center;
+  max-width: 760px;
+}
+
+.suzumori-status-box .featured-link {
+  display: inline-block;
+  margin-top: 26px;
+}
+
+@media (max-width: 860px) {
+  .suzumori-hero {
+    grid-template-columns: 1fr;
+    gap: 38px;
+    padding: 48px 18px 70px;
+  }
+
+  .suzumori-hero-image img {
+    width: min(380px, 90%);
+  }
+
+  .suzumori-hero-content {
+    text-align: center;
+  }
+
+  .suzumori-hero-content .featured-meta {
+    align-items: center;
+  }
+
+  .suzumori-feature-grid {
+    grid-template-columns: 1fr;
+  }
+}
