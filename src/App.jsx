@@ -350,8 +350,32 @@ function App() {
           className="footer-logo"
         />
 
+        <div className="social-links">
+          <a
+            href="https://x.com/chiichii_treasu"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+            aria-label="ちぃちぃトレジャーズ公式X"
+          >
+            <span className="social-icon">𝕏</span>
+            <span>X</span>
+          </a>
+
+          <a
+            href="https://www.instagram.com/chiichii_treasures/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="social-link"
+            aria-label="ちぃちぃトレジャーズ公式Instagram"
+          >
+            <span className="social-icon">◎</span>
+            <span>Instagram</span>
+          </a>
+        </div>
+
         <p>
-          © 2026 CHII CHII TREASURES
+          © {new Date().getFullYear()} CHII CHII TREASURES
         </p>
       </footer>
     </div>
