@@ -1056,15 +1056,23 @@ img {
 }
 
 @media (max-width: 860px) {
-  .featured-image {
+  .featured-image-wrap {
     width: 100%;
-    height: auto;
-    aspect-ratio: auto;
-    object-fit: contain;
-    object-position: center top;
+    height: auto !important;
+    min-height: 0 !important;
+    aspect-ratio: auto !important;
+    overflow: visible;
+    background: #fffafc;
   }
 
-  .featured-image-wrap {
-    background: #fffafc;
+  .featured-image {
+    display: block;
+    width: 100%;
+    height: auto !important;
+    min-height: 0 !important;
+    max-height: none !important;
+    aspect-ratio: auto !important;
+    object-fit: contain !important;
+    object-position: center top !important;
   }
 }
