@@ -1054,3 +1054,17 @@ img {
     grid-template-columns: 1fr;
   }
 }
+
+@media (max-width: 860px) {
+  .featured-image {
+    width: 100%;
+    height: auto;
+    aspect-ratio: auto;
+    object-fit: contain;
+    object-position: center top;
+  }
+
+  .featured-image-wrap {
+    background: #fffafc;
+  }
+}
