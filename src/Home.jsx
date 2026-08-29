@@ -6,6 +6,8 @@ import logoPaw from './assets/logo-paw.png'
 
 import projectSuzumori from './assets/project-suzumori.png'
 import projectSuzumoriFeatured from './assets/project-suzumori-featured.png'
+import novelCover from './assets/novel-cover.png'
+import projectSuzumoriNovel from './assets/project-suzumori-novel.png'
 import projectAiChat from './assets/project-ai-chat.png'
 import projectComingSoon from './assets/project-coming-soon.png'
 
@@ -33,7 +35,8 @@ function Home() {
           </div>
 
           <nav className="nav">
-            <a href="#featured">FEATURED</a>
+            <a href="/suzumori">GAME</a>
+            <a href="/suzumori/novel">NOVEL</a>
             <a href="#projects">PROJECTS</a>
             <a href="#about">ABOUT</a>
             <a href="#news">NEWS</a>
@@ -52,9 +55,9 @@ function Home() {
             />
 
             <p className="hero-copy">
-              ゲーム・アプリ・AIサービス。
+              ゲーム・小説・アプリ・AIサービス。
               <br />
-              「面白い」を宝物に変えていく開発ブランドです。
+              「面白い」を宝物に変えていく制作・開発ブランドです。
             </p>
 
             <div className="hero-status">
@@ -125,12 +128,21 @@ function Home() {
                   </span>
                 </div>
 
-                <a
-                  href="/suzumori"
-                  className="featured-link"
-                >
-                  鈴守神社の詳細を見る →
-                </a>
+                <div className="featured-meta">
+                  <a
+                    href="/suzumori"
+                    className="featured-link"
+                  >
+                    GAMEを見る →
+                  </a>
+
+                  <a
+                    href="/suzumori/novel"
+                    className="featured-link"
+                  >
+                    NOVELを読む →
+                  </a>
+                </div>
               </div>
             </article>
           </div>
@@ -153,13 +165,13 @@ function Home() {
               <article className="project-card">
                 <img
                   src={projectSuzumori}
-                  alt="鈴守神社～妖怪異変録～"
+                  alt="ゲーム版 鈴守神社～妖怪異変録～"
                   className="project-image"
                 />
 
                 <div className="project-content">
                   <span className="project-status">
-                    開発中
+                    GAME / 開発中
                   </span>
 
                   <h3>
@@ -169,15 +181,45 @@ function Home() {
                   <p>
                     かわいい巫女と妖怪たちが駆ける、
                     和風アクションシューティング。
-                    神社を舞台に、不思議な異変へ立ち向かう
-                    ちぃちぃトレジャーズ第一作目です。
+                    主人公・鈴（りん）が妖怪異変へ立ち向かいます。
                   </p>
 
                   <a
                     href="/suzumori"
                     className="project-link"
                   >
-                    プロジェクトを見る →
+                    ゲーム紹介を見る →
+                  </a>
+                </div>
+              </article>
+
+              <article className="project-card">
+                <img
+                  src={projectSuzumoriNovel}
+                  alt="小説版 鈴守神社～妖怪異変録～"
+                  className="project-image"
+                />
+
+                <div className="project-content">
+                  <span className="project-status">
+                    NOVEL / 連載準備中
+                  </span>
+
+                  <h3>
+                    小説版 鈴守神社～妖怪異変録～
+                  </h3>
+
+                  <p>
+                    ゲーム版と同時進行で描くWeb小説版。
+                    ゲーム完成を待たず、一足先に
+                    鈴たちの物語を読むことができます。
+                  </p>
+
+                  <a
+                    href="/suzumori/novel"
+                    className="project-link"
+                  >
+                    小説版を読む →
                   </a>
                 </div>
               </article>
@@ -227,7 +269,7 @@ function Home() {
                   </h3>
 
                   <p>
-                    ゲーム、アプリ、AIサービスなど、
+                    ゲーム、小説、アプリ、AIサービスなど、
                     新しいプロジェクトを順次公開していきます。
                   </p>
 
@@ -264,9 +306,9 @@ function Home() {
 
               <p>
                 ちぃちぃトレジャーズは、
-                ゲーム、アプリ、AIサービスなど、
+                ゲーム、小説、アプリ、AIサービスなど、
                 「面白い」と思ったアイデアを
-                一つずつ形にしていく開発ブランドです。
+                一つずつ形にしていく制作・開発ブランドです。
               </p>
 
               <p>
@@ -310,6 +352,16 @@ function Home() {
 
                 <p>
                   第一作目「鈴守神社～妖怪異変録～」を開発中です。
+                </p>
+              </article>
+
+              <article className="news-item">
+                <time dateTime="2026-08-30">
+                  2026.08.30
+                </time>
+
+                <p>
+                  「鈴守神社～妖怪異変録～」小説版のWeb連載を準備中です。
                 </p>
               </article>
             </div>

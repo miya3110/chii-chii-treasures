@@ -1076,3 +1076,207 @@ img {
     object-position: center top !important;
   }
 }
+
+
+/* =========================
+   SUZUMORI NOVEL PAGE
+========================= */
+
+.novel-hero-section {
+  background:
+    radial-gradient(circle at 18% 12%, rgba(255, 220, 228, 0.34), transparent 30%),
+    radial-gradient(circle at 88% 82%, rgba(232, 204, 144, 0.20), transparent 28%);
+}
+
+.novel-hero {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.8fr) minmax(360px, 1.2fr);
+  gap: 70px;
+  align-items: center;
+}
+
+.novel-cover-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.novel-cover-link {
+  position: relative;
+  display: block;
+  width: min(420px, 100%);
+  border-radius: 26px;
+  overflow: hidden;
+  box-shadow:
+    0 28px 64px rgba(192, 139, 158, 0.22),
+    0 0 34px rgba(255, 215, 229, 0.22);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.novel-cover-link:hover {
+  transform: translateY(-8px) scale(1.01);
+  box-shadow:
+    0 34px 74px rgba(192, 139, 158, 0.28),
+    0 0 44px rgba(255, 215, 229, 0.28);
+}
+
+.novel-cover {
+  width: 100%;
+  display: block;
+}
+
+.novel-cover-overlay {
+  position: absolute;
+  left: 50%;
+  bottom: 22px;
+  transform: translateX(-50%);
+  padding: 10px 18px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.90);
+  border: 1px solid rgba(226, 178, 195, 0.48);
+  color: #c87593;
+  font-size: 0.78rem;
+  font-weight: 900;
+  white-space: nowrap;
+  box-shadow:
+    0 10px 24px rgba(171, 119, 139, 0.16);
+  backdrop-filter: blur(8px);
+}
+
+.novel-intro h1 {
+  margin: 0 0 12px;
+  font-size: clamp(2.6rem, 5vw, 4.8rem);
+  line-height: 1.35;
+  color: #594853;
+  letter-spacing: 0.04em;
+}
+
+.novel-subtitle {
+  margin: 0 0 24px;
+  color: #d28aa1;
+  font-size: 1.25rem;
+  font-weight: 900;
+  letter-spacing: 0.14em;
+}
+
+.novel-description {
+  margin: 0 0 18px;
+  line-height: 2.1;
+  color: #74646f;
+}
+
+.novel-status {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin: 26px 0 0;
+}
+
+.novel-status span {
+  padding: 8px 13px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.76);
+  border: 1px solid rgba(226, 185, 200, 0.48);
+  color: #936f7e;
+  font-size: 0.74rem;
+  font-weight: 800;
+}
+
+.novel-index-section {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,0.58),
+      rgba(255,249,252,0.74)
+    );
+}
+
+.novel-episode-list {
+  display: grid;
+  gap: 18px;
+}
+
+.novel-episode-card {
+  display: grid;
+  grid-template-columns: 110px 1fr auto;
+  gap: 24px;
+  align-items: center;
+  padding: 26px 28px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.86);
+  border: 1px solid rgba(229, 190, 203, 0.44);
+  box-shadow:
+    0 16px 36px rgba(202, 155, 173, 0.12);
+}
+
+.novel-episode-number {
+  color: #d488a1;
+  font-size: 0.86rem;
+  font-weight: 900;
+  letter-spacing: 0.08em;
+}
+
+.novel-episode-info h3 {
+  margin: 0 0 8px;
+  color: #5e4d58;
+  font-size: 1.2rem;
+}
+
+.novel-episode-info p {
+  margin: 0;
+  line-height: 1.8;
+  color: #756771;
+}
+
+.novel-episode-link {
+  padding: 10px 15px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, #e99db4, #e4be70);
+  color: #fff;
+  font-size: 0.76rem;
+  font-weight: 900;
+}
+
+.novel-note {
+  max-width: 800px;
+  text-align: center;
+}
+
+.novel-note p:not(.section-label) {
+  line-height: 2;
+  color: #74646f;
+}
+
+.novel-note .featured-link {
+  display: inline-block;
+  margin-top: 24px;
+}
+
+@media (max-width: 860px) {
+  .novel-hero {
+    grid-template-columns: 1fr;
+    gap: 42px;
+  }
+
+  .novel-cover-link {
+    width: min(360px, 92%);
+  }
+
+  .novel-intro {
+    text-align: center;
+  }
+
+  .novel-status {
+    justify-content: center;
+  }
+
+  .novel-episode-card {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .novel-episode-link {
+    justify-self: start;
+  }
+}

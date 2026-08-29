@@ -3,6 +3,7 @@ import './App.css'
 
 import logoPaw from './assets/logo-paw.png'
 import projectSuzumoriFeatured from './assets/project-suzumori-featured.png'
+import novelCover from './assets/novel-cover.png'
 
 function Suzumori() {
   useEffect(() => {
@@ -66,6 +67,8 @@ function Suzumori() {
 
           <nav className="nav">
             <a href="/">TOP</a>
+            <a href="/suzumori">GAME</a>
+            <a href="/suzumori/novel">NOVEL</a>
           </nav>
         </div>
       </header>
@@ -142,6 +145,67 @@ function Suzumori() {
               ちぃちぃトレジャーズ第一作目として
               現在開発中です。
             </p>
+          </div>
+        </section>
+
+        <section className="section featured-section">
+          <div className="section-inner">
+            <div className="featured-heading">
+              <p className="section-label">
+                NOVEL
+              </p>
+
+              <h2>
+                小説版も同時進行
+              </h2>
+            </div>
+
+            <article className="featured-project">
+              <div className="featured-image-wrap">
+                <img
+                  src={novelCover}
+                  alt="小説版 鈴守神社～妖怪異変録～"
+                  className="featured-image"
+                />
+
+                <span className="featured-badge">
+                  Web小説
+                </span>
+              </div>
+
+              <div className="featured-content">
+                <p className="featured-number">
+                  SUZUMORI NOVEL
+                </p>
+
+                <h3>
+                  小説版
+                  <br />
+                  鈴守神社～妖怪異変録～
+                </h3>
+
+                <p className="featured-catch">
+                  ゲームと同時進行で、
+                  <br />
+                  一足先に物語を読めます。
+                </p>
+
+                <p className="featured-description">
+                  ゲーム版の完成を待たず、
+                  主人公・鈴（りん）と妖怪たちの物語を
+                  Web小説として順次公開していきます。
+                  ちぃちぃトレジャーズ版では、
+                  挿絵を交えたWebならではの形でお届けします。
+                </p>
+
+                <a
+                  href="/suzumori/novel"
+                  className="featured-link"
+                >
+                  小説版を読む →
+                </a>
+              </div>
+            </article>
           </div>
         </section>
 
