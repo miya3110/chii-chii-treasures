@@ -1,9 +1,38 @@
+import { useEffect } from 'react'
+
 import './App.css'
 
 import logoPaw from './assets/logo-paw.png'
 import novelCover from './assets/novel-cover.png'
 
+import episodes from './novel/episodes'
+
 function Novel() {
+  useEffect(() => {
+    document.title =
+      '小説版 鈴守神社～妖怪異変録～ | ちぃちぃトレジャーズ'
+
+    let descriptionMeta =
+      document.querySelector('meta[name="description"]')
+
+    if (!descriptionMeta) {
+      descriptionMeta = document.createElement('meta')
+      descriptionMeta.name = 'description'
+      document.head.appendChild(descriptionMeta)
+    }
+
+    descriptionMeta.content =
+      'ちぃちぃトレジャーズ公式Web小説「鈴守神社～妖怪異変録～」。主人公・鈴と妖怪たちの物語を、挿絵付きで連載しています。'
+
+    return () => {
+      document.title = 'ちぃちぃトレジャーズ'
+    }
+  }, [])
+
+  const firstPublishedEpisode = episodes.find(
+    (episode) => episode.status === 'published'
+  )
+
   return (
     <div className="site novel-page">
       <header className="site-header">
@@ -15,7 +44,10 @@ function Novel() {
               className="brand-icon"
             />
 
-            <div className="brand-text notranslate" translate="no">
+            <div
+              className="brand-text notranslate"
+              translate="no"
+            >
               <span className="brand-name">
                 ちぃちぃトレジャーズ
               </span>
@@ -29,6 +61,7 @@ function Novel() {
           <nav className="nav">
             <a href="/">TOP</a>
             <a href="/suzumori">GAME</a>
+            <a href="/suzumori/novel">NOVEL</a>
           </nav>
         </div>
       </header>
@@ -38,7 +71,11 @@ function Novel() {
           <div className="section-inner novel-hero">
             <div className="novel-cover-wrap">
               <a
-                href="/suzumori/novel/01"
+                href={
+                  firstPublishedEpisode
+                    ? `/suzumori/novel/${firstPublishedEpisode.id}`
+                    : '/suzumori/novel'
+                }
                 className="novel-cover-link"
               >
                 <img
@@ -55,7 +92,7 @@ function Novel() {
 
             <div className="novel-intro">
               <p className="section-label">
-                NOVEL
+                OFFICIAL WEB NOVEL
               </p>
 
               <h1>
@@ -80,13 +117,21 @@ function Novel() {
                 そして異変の裏側まで物語として描いていきます。
               </p>
 
+              <p className="novel-description">
+                ちぃちぃトレジャーズ公式版では、
+                本文とともに挿絵やビジュアルを掲載し、
+                Webならではの物語体験をお届けします。
+              </p>
+
               <div className="novel-status">
                 <span>連載中</span>
-                <span>Web小説</span>
+                <span>公式Web小説</span>
+                <span>挿絵対応</span>
               </div>
             </div>
           </div>
         </section>
+
         <section className="section novel-index-section">
           <div className="section-inner">
             <p className="section-label">
@@ -98,51 +143,61 @@ function Novel() {
             </h2>
 
             <div className="novel-episode-list">
-              <article className="novel-episode-card">
-                <span className="novel-episode-number">
-                  第一話
-                </span>
+              {episodes.map((episode) => {
+                const isPublished =
+                  episode.status === 'published'
 
-                <div className="novel-episode-info">
-                  <h3>
-                    鈴守神社
-                  </h3>
+                const isWriting =
+                  episode.status === 'writing'
 
-                  <p>
-                    主人公・鈴（りん）が、山で起きた異変へ向かい、
-                    九尾の少女・久美と出会う物語の始まり。
-                  </p>
-                </div>
+                return (
+                  <article
+                    key={episode.id}
+                    className={
+                      isWriting
+                        ? 'novel-episode-card novel-episode-card-writing'
+                        : 'novel-episode-card'
+                    }
+                  >
+                    <span className="novel-episode-number">
+                      {episode.number}
+                    </span>
 
-                <a
-                  href="/suzumori/novel/01"
-                  className="novel-episode-link"
-                >
-                  読む →
-                </a>
-              </article>
+                    <div className="novel-episode-info">
+                      <h3>
+                        {isPublished
+                          ? episode.title
+                          : '執筆中'}
+                      </h3>
 
-              <article className="novel-episode-card novel-episode-card-writing">
-                <span className="novel-episode-number">
-                  第二話
-                </span>
+                      <p>
+                        {episode.description}
+                      </p>
 
-                <div className="novel-episode-info">
-                  <h3>
-                    執筆中
-                  </h3>
+                      {isPublished &&
+                        episode.publishedAt && (
+                          <p className="novel-episode-date">
+                            公開日：
+                            {episode.publishedAt}
+                          </p>
+                        )}
+                    </div>
 
-                  <p>
-                    第二話は現在執筆中です。
-                    公開までしばらくお待ちください。
-                  </p>
-                </div>
-
-                <span className="novel-episode-link novel-episode-link-disabled">
-                  COMING SOON
-                </span>
-              </article>
-
+                    {isPublished ? (
+                      <a
+                        href={`/suzumori/novel/${episode.id}`}
+                        className="novel-episode-link"
+                      >
+                        読む →
+                      </a>
+                    ) : (
+                      <span className="novel-episode-link novel-episode-link-disabled">
+                        COMING SOON
+                      </span>
+                    )}
+                  </article>
+                )
+              })}
             </div>
           </div>
         </section>
@@ -163,11 +218,17 @@ function Novel() {
               順次掲載していく予定です。
             </p>
 
+            <p>
+              ゲーム版と小説版は同じ世界を共有しながら、
+              それぞれの表現だからこそ描ける
+              『鈴守神社～妖怪異変録～』を展開していきます。
+            </p>
+
             <a
               href="/suzumori"
               className="featured-link"
             >
-              鈴守神社 作品ページへ戻る →
+              GAME版 鈴守神社を見る →
             </a>
           </div>
         </section>
