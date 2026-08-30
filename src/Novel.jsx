@@ -81,13 +81,12 @@ function Novel() {
               </p>
 
               <div className="novel-status">
-                <span>連載準備中</span>
+                <span>連載中</span>
                 <span>Web小説</span>
               </div>
             </div>
           </div>
         </section>
-
         <section className="section novel-index-section">
           <div className="section-inner">
             <p className="section-label">
@@ -106,12 +105,12 @@ function Novel() {
 
                 <div className="novel-episode-info">
                   <h3>
-                    タイトル未定
+                    鈴守神社
                   </h3>
 
                   <p>
-                    小説版『鈴守神社～妖怪異変録～』第一話。
-                    現在執筆準備中です。
+                    主人公・鈴（りん）が、山で起きた異変へ向かい、
+                    九尾の少女・久美と出会う物語の始まり。
                   </p>
                 </div>
 
@@ -122,6 +121,28 @@ function Novel() {
                   読む →
                 </a>
               </article>
+
+              <article className="novel-episode-card novel-episode-card-writing">
+                <span className="novel-episode-number">
+                  第二話
+                </span>
+
+                <div className="novel-episode-info">
+                  <h3>
+                    執筆中
+                  </h3>
+
+                  <p>
+                    第二話は現在執筆中です。
+                    公開までしばらくお待ちください。
+                  </p>
+                </div>
+
+                <span className="novel-episode-link novel-episode-link-disabled">
+                  COMING SOON
+                </span>
+              </article>
+
             </div>
           </div>
         </section>

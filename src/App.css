@@ -1280,3 +1280,12 @@ img {
     justify-self: start;
   }
 }
+
+.novel-episode-card-writing {
+  opacity: 0.78;
+}
+
+.novel-episode-link-disabled {
+  cursor: default;
+  opacity: 0.65;
+}
