@@ -310,13 +310,17 @@
   }
 
   .novel-text {
-    padding: 52px 24px 62px;
+    padding: 52px 24px 62px 44px;
 
     font-size: 1rem;
     line-height: 1.85;
     letter-spacing: 0.02em;
-  }
 
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+    word-break: break-word;
+  }
+  
   .novel-text::before {
     top: -14px;
 
